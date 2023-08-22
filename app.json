@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "todo-app",
-    "slug": "todo-app",
+    "name": "mytodos",
+    "slug": "mytodos",
+    "scheme": "mytodos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flemingvincent.mytodos"
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +26,22 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "300f2a8e-8f0c-4fef-a907-0c2b083b49b5"
+      }
     }
   }
 }
