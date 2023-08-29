@@ -1,47 +1,44 @@
 {
-  "expo": {
-    "name": "mytodos",
-    "slug": "mytodos",
-    "scheme": "mytodos",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.flemingvincent.mytodos"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
-    },
-    "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "tsconfigPaths": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "300f2a8e-8f0c-4fef-a907-0c2b083b49b5"
-      }
-    }
-  }
+	"expo": {
+		"name": "mytodos",
+		"slug": "mytodos",
+		"scheme": "mytodos",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "light",
+		"backgroundColor": "#fafafa",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "cover",
+			"backgroundColor": "#fafafa"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": false,
+			"bundleIdentifier": "com.flemingvincent.mytodos"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#fafafa"
+			}
+		},
+		"web": {
+			"favicon": "./assets/favicon.png",
+			"bundler": "metro"
+		},
+		"plugins": ["expo-router"],
+		"experiments": {
+			"tsconfigPaths": true
+		},
+		"extra": {
+			"router": {
+				"origin": false
+			},
+			"eas": {
+				"projectId": "300f2a8e-8f0c-4fef-a907-0c2b083b49b5"
+			}
+		}
+	}
 }

@@ -5,6 +5,8 @@ import { SplashScreen, Stack } from "expo-router";
 import { useDeviceContext } from "twrnc";
 
 import tw from "@/lib/tailwind";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -31,17 +33,14 @@ export default function RootLayout() {
 	if (!loaded) return null;
 
 	return (
-		<Stack
-			screenOptions={{
-				headerShown: false,
-			}}
-		>
-			<Stack.Screen
-				name="modal"
-				options={{
-					presentation: "modal",
-				}}
-			/>
-		</Stack>
+		<GestureHandlerRootView style={tw`flex-1`}>
+			<BottomSheetModalProvider>
+				<Stack
+					screenOptions={{
+						headerShown: false,
+					}}
+				/>
+			</BottomSheetModalProvider>
+		</GestureHandlerRootView>
 	);
 }
