@@ -48,6 +48,10 @@ export default function Page() {
 		bottomSheetModalRef.current?.dismiss();
 	};
 
+	const handleToggleCompletion = (id: string) => {
+		toggleCompletion(id);
+	};
+
 	const handleRemoveTodo = (id: string) => {
 		Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
@@ -65,8 +69,8 @@ export default function Page() {
 	};
 
 	return (
-		<SafeAreaView style={tw`flex-1 px-4 bg-neutral-50`}>
-			<Text style={tw`large-title-emphasized py-4 text-neutral-950`}>
+		<SafeAreaView style={tw`flex-1 bg-neutral-50`}>
+			<Text style={tw`large-title-emphasized p-4 text-neutral-950`}>
 				MyTodos
 			</Text>
 			<ScrollView style={tw`flex-1`}>
@@ -76,10 +80,10 @@ export default function Page() {
 						index={index}
 						length={todos.length}
 						title={todo.title}
-						completed={todo.completed}
 						description={todo.description}
-						onPress={() => toggleCompletion(todo.id)}
-						onLongPress={() => handleRemoveTodo(todo.id)}
+						completed={todo.completed}
+						toggleCompletion={() => handleToggleCompletion(todo.id)}
+						removeTodo={() => handleRemoveTodo(todo.id)}
 						entering={initialMode.current ? FadeIn.delay(100 * index) : FadeIn}
 						exiting={FadeOut}
 						layout={Layout.delay(100)}
